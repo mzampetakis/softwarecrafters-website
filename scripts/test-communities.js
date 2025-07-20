@@ -1,4 +1,3 @@
-const glob = require('glob');
 const path = require('path');
 const fs = require('fs');
 
@@ -10,12 +9,16 @@ ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-07.json'));
 
 const validate = ajv.compile(communitySchema);
 
-const communityFiles = glob.sync(path.resolve(__dirname, '../communities/') + '/*.json');
+const communitiesDir = path.resolve(__dirname, '../communities/');
+const communityFiles = fs
+  .readdirSync(communitiesDir)
+  .filter((file) => file.endsWith('.json'))
+  .map((file) => path.join(communitiesDir, file));
 
 let failed = false;
 
 console.log('Testing community files');
-communityFiles.forEach(file => {
+communityFiles.forEach((file) => {
   const baseName = path.basename(file);
   const isValid = validate(JSON.parse(fs.readFileSync(file)));
 
