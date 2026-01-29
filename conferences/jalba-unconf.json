@@ -4,10 +4,14 @@
   "code-of-conduct": "http://jalba.scot/jalba-code-of-conduct/",
   "location": {
     "city": "Edinburgh",
-    "coordinates": { "lat": 55.9533, "lng": -3.188267 }
+    "country": "Scotland",
+    "coordinates": {
+      "lat": 55.9533,
+      "lng": -3.188267
+    }
   },
   "next-date": {
-    "start": "2025-05-28",
-    "end": "2025-05-31"
+    "start": "2026-05-14",
+    "end": "2026-05-16"
   }
 }

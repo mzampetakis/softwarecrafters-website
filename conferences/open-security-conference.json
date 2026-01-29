@@ -8,6 +8,10 @@
   },
   "location": {
     "city": "Rückersbach",
-    "coordinates": { "lat": 50.06738, "lng": 9.10824 }
+    "country": "Germany",
+    "coordinates": {
+      "lat": 50.06738,
+      "lng": 9.10824
+    }
   }
 }

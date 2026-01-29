@@ -7,6 +7,11 @@
     "end": "2019-05-31"
   },
   "location": {
-    "coordinates": { "lat": 44.44134, "lng": 26.09442 }
+    "city": "Bucharest",
+    "country": "Romania",
+    "coordinates": {
+      "lat": 44.44134,
+      "lng": 26.09442
+    }
   }
 }

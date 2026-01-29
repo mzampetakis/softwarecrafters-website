@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const Ajv = require('ajv');
-const communitySchema = require('../conferences_schema.json');
+const communitySchema = require('../conferences_schema_v2.json');
 
 const ajv = new Ajv({ schemaId: 'id' });
 ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-07.json'));

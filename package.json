@@ -8,8 +8,8 @@
   "license": "MIT",
   "scripts": {
     "build": "npm-run-all test build:communities build:conferences build:conferences-ics build:conferences-jsonp build:js",
-    "build:communities": "node scripts/build-communities.js && cp communities.json target/",
-    "build:conferences": "node scripts/build-conferences.js && cp conferences.json target/",
+    "build:communities": "node scripts/build-communities.js && cp communities.json communities_schema.json target/",
+    "build:conferences": "node scripts/build-conferences.js && cp conferences.json conferences_schema_v2.json target/",
     "build:conferences-ics": "node scripts/build-conferences-ics.js && cp conferences.ics target/",
     "build:conferences-jsonp": "node scripts/build-conferences-jsonp.js && cp conferences.js target/",
     "build:js": "rollup -c rollup.config.js",

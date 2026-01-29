@@ -7,6 +7,11 @@
     "end": "2025-06-28"
   },
   "location": {
-    "coordinates": { "lat": 48.09459548892182, "lng": 11.505345107934543 }
+    "city": "Munich",
+    "country": "Germany",
+    "coordinates": {
+      "lat": 48.09459548892182,
+      "lng": 11.505345107934543
+    }
   }
 }
