@@ -2,11 +2,12 @@ const glob = require('glob');
 const path = require('path');
 const fs = require('fs');
 
-const Ajv = require('ajv');
+const Ajv = require('ajv/dist/2020');
+const addFormats = require('ajv-formats');
 const communitySchema = require('../conferences_schema_v2.json');
 
-const ajv = new Ajv({ schemaId: 'id' });
-ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-07.json'));
+const ajv = new Ajv();
+addFormats(ajv);
 
 const validate = ajv.compile(communitySchema);
 

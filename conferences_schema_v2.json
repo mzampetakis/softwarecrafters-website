@@ -1,7 +1,13 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Schema for Conference JSON Files",
   "type": "object",
   "properties": {
+    "$schema": {
+      "description": "Schema reference",
+      "type": "string",
+      "format": "uri"
+    },
     "name": {
       "description": "Name of your community",
       "type": "string"
@@ -12,7 +18,8 @@
     },
     "url": {
       "description": "URL leading to further information about your conference",
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "code-of-conduct": {
       "description": "URL to your code of conduct",

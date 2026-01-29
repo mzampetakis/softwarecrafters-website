@@ -1,4 +1,5 @@
 {
+  "$schema": "https://softwarecrafters.org/conferences_schema_v2.json",
   "name": "SoCraTes UK",
   "url": "https://socratesuk.org/",
   "code-of-conduct": "https://socratesuk.org/code_of_conduct.html",
