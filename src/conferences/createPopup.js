@@ -5,8 +5,8 @@ const createCocText = conference =>
     ? `<p><strong><a href="${conference.properties.coc}">Code of Conduct</a></strong></p>`
     : '';
 
-const createCovid19PolicyText = conference =>
-  `<p><strong>COVID-19 Policy: </strong>${conference.properties.covid19 ?? 'not specified'}`;
+const createHealthPolicyText = conference =>
+  `<p><strong>Health Policy: </strong>${conference.properties.health ?? 'not specified'}`;
 
 const createDateText = conference => {
   if (conference.properties.start == null) return '';
@@ -26,11 +26,10 @@ const createDateText = conference => {
   return `<p><strong>Next:&nbsp;</strong>${dateFormatted}`;
 };
 
-const createIcon = conference => `  ${
-  conference.properties.icon
+const createIcon = conference => `  ${conference.properties.icon
     ? `<img class="popup-icon" role="presentation" src="${conference.properties.icon}">`
     : ''
-}
+  }
 `;
 
 export default conference => {
@@ -44,7 +43,7 @@ export default conference => {
     <h1><a target="_blank" href="${conference.properties.url}">${conference.properties.name}</a>${icon}</h1>
     ${createDateText(conference)}
     ${createCocText(conference)}
-    ${createCovid19PolicyText(conference)}
+    ${createHealthPolicyText(conference)}
   `;
 
   return div;
