@@ -8,6 +8,8 @@
     "end": "2024-10-05"
   },
   "location": {
+    "city": "Rimini",
+    "country": "Italy",
     "coordinates": { "lat": 44.06923, "lng": 12.57958 }
   }
 }

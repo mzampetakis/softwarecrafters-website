@@ -8,6 +8,11 @@
     "end": "2019-09-28"
   },
   "location": {
-    "coordinates": { "lat": 49.453445, "lng": 11.046401 }
+    "city": "Nürnberg",
+    "country": "Germany",
+    "coordinates": {
+      "lat": 49.453445,
+      "lng": 11.046401
+    }
   }
 }

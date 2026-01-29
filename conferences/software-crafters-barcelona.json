@@ -8,6 +8,11 @@
     "end": "2024-10-26"
   },
   "location": {
-    "coordinates": { "lat": 41.3976607950043, "lng": 2.195687301499504 }
+    "city": "Barcelona",
+    "country": "Spain",
+    "coordinates": {
+      "lat": 41.3976607950043,
+      "lng": 2.195687301499504
+    }
   }
 }

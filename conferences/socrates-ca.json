@@ -8,6 +8,11 @@
     "end": "2025-10-05"
   },
   "location": {
-    "coordinates": { "lat": 45.990358, "lng": -74.749357 }
+    "city": "Amherst",
+    "country": "Canada",
+    "coordinates": {
+      "lat": 45.990358,
+      "lng": -74.749357
+    }
   }
 }

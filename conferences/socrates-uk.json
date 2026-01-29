@@ -9,6 +9,8 @@
   },
   "health-policy": "Masks recommended, daily tests mandatory (both provided by us) and air filtering",
   "location": {
+    "city": "Abingdon",
+    "country": "United Kingdom",
     "coordinates": {
       "lat": 51.608682,
       "lng": -1.315764
