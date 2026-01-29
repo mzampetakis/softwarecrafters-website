@@ -12,13 +12,13 @@ const validate = ajv.compile(communitySchema);
 const communitiesDir = path.resolve(__dirname, '../communities/');
 const communityFiles = fs
   .readdirSync(communitiesDir)
-  .filter((file) => file.endsWith('.json'))
-  .map((file) => path.join(communitiesDir, file));
+  .filter(file => file.endsWith('.json'))
+  .map(file => path.join(communitiesDir, file));
 
 let failed = false;
 
 console.log('Testing community files');
-communityFiles.forEach((file) => {
+communityFiles.forEach(file => {
   const baseName = path.basename(file);
   const isValid = validate(JSON.parse(fs.readFileSync(file)));
 

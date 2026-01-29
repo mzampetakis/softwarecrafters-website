@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function getUpcomingConferences(conferences, today) {
     return conferences
-      .filter((conference) => {
+      .filter(conference => {
         return (
           conference['next-date'] &&
           conference['next-date'].start &&
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function displayConferences(conferences, containerElement) {
-    conferences.forEach((conference) => {
+    conferences.forEach(conference => {
       const listItem = createConferenceItem(conference);
       containerElement.appendChild(listItem);
     });
