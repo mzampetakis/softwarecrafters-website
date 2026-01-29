@@ -35,10 +35,7 @@
           "$ref": "#/definitions/date"
         }
       },
-      "required": [
-        "start",
-        "end"
-      ],
+      "required": ["start", "end"],
       "additionalProperties": false
     },
     "location": {
@@ -57,12 +54,7 @@
     }
   },
   "additionalProperties": false,
-  "required": [
-    "name",
-    "url",
-    "location",
-    "code-of-conduct"
-  ],
+  "required": ["name", "url", "location", "code-of-conduct"],
   "definitions": {
     "date": {
       "type": "string",
@@ -70,9 +62,7 @@
     },
     "virtual_location": {
       "type": "string",
-      "enum": [
-        "virtual"
-      ]
+      "enum": ["virtual"]
     },
     "real_location": {
       "description": "Information about where to place your conference on the map",
@@ -102,16 +92,11 @@
             }
           },
           "additionalProperties": false,
-          "required": [
-            "lat",
-            "lng"
-          ]
+          "required": ["lat", "lng"]
         }
       },
       "additionalProperties": false,
-      "required": [
-        "coordinates"
-      ]
+      "required": ["coordinates"]
     }
   }
 }
