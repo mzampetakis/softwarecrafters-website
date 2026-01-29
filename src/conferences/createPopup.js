@@ -26,10 +26,11 @@ const createDateText = conference => {
   return `<p><strong>Next:&nbsp;</strong>${dateFormatted}`;
 };
 
-const createIcon = conference => `  ${conference.properties.icon
+const createIcon = conference => `  ${
+  conference.properties.icon
     ? `<img class="popup-icon" role="presentation" src="${conference.properties.icon}">`
     : ''
-  }
+}
 `;
 
 export default conference => {
