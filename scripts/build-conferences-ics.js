@@ -17,11 +17,13 @@ const conferences = conferenceFiles
 const { error, value } = ics.createEvents(
   conferences.map(conference => {
     const start = conference['next-date']['start'].split(/-/).map(Number);
-    const end = conference['next-date']['end'].split(/-/).map(Number);
+    let end = conference['next-date']['end'].split(/-/).map(Number);
 
     if (conference['next-date']['start'] === conference['next-date']['end']) {
       // Yeah, that's how ICS works.
-      end[2]++;
+      const today = new Date(conference['next-date']['end']);
+      const tomorrow = new Date(today.getTime() + 1000 * 60 * 60 * 24);
+      end = tomorrow.toISOString().substring(0, 10).split(/-/).map(Number);
     }
 
     return {
@@ -30,10 +32,12 @@ const { error, value } = ics.createEvents(
       url: conference.url,
       start,
       end,
-      geo: {
-        lat: conference.location.coordinates.lat,
-        lon: conference.location.coordinates.lng,
-      },
+      geo: conference.location?.coordinates
+        ? {
+            lat: conference.location.coordinates.lat,
+            lon: conference.location.coordinates.lng,
+          }
+        : {},
     };
   })
 );
